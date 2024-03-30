@@ -1,0 +1,56 @@
+<!-- // outputs
+//  console.log('hello');
+//  alert('hi');-->
+
+comments
+//this is single line comment
+ /*
+ multi line comment
+ */ 
+
+// variables-used to store the Data
+
+Arithmetic Operators: + -  *  ** / % ++ --
+Assignment Operators: = += -= *= /= %= **=
+comparison Operators :== === != !== > < >= <=;
+logical Operators :&& || !
+Bitwise Operator : & | ~ ^ << >> >>>
+
+// user input-prompt
+
+let name=prompt("What is your name");
+console.log("hi",name);
+
+//DOC -document object Model -tree 
+<body>
+    <h1 id="message"></h1>
+  <script>
+        let message=document.getElementById("message");
+        message.innerHTML="Hi hello"    
+</script>
+</body>
+
+//cm to inch in DOM
+<body>
+  <div id="box">
+    <h2>cm to inches</h2>
+    <div class="inputdiv">
+      <input type="text" id="input" placeholder="length to cm" >
+      </div>
+      <div>
+        <button type="submit" onclick="convert()">Convert</button>
+      </div>
+      <div id="result">
+
+      </div>
+      </div>
+      <script>
+        function convert(){
+        let cm=Number(document.getElementById("input").value)
+        let inch=cm/2.54
+        let result=document.getElementById("result")
+        result.innerHTML =inch
+        cm/2.54
+        }
+      </script>
+</body
