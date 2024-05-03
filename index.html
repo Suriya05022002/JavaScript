@@ -121,3 +121,733 @@ str1.startWith('h')=true
 let random = (Math.floor(Math.random()*name.length))
 console.log(name.charAt(random))
 
+ 
+let str1 = "Strive not to be a success, ";
+let str2 = "but rather to be a value";
+// try in console
+//joining string - + and concat
+str1+str2 
+str1.concat(str2) //joins the two strings
+str1.concat(**, str2) 
+
+/*
+Partitioning String
+
+slice(start, end)
+substring(start, end)
+substr(start, length)
+*/
+str2.slice(4,10) //result - 'rather'
+str2.slice(4) //result - 'rather to be a value'
+//negative index counts backwards. Last character is -1
+str2.slice(-5) //result - 'value'
+
+str2.substring(4,10) //result - 'rather'
+str2.substr(4,10) //result - 'rather to '
+
+//replace
+str1.replace('Strive','Aim') //result - 'Aim not to be a success, '
+
+str1.toUpperCase() //result - 'STRIVE NOT TO BE A SUCCESS, '
+str1.toLowerCase() //result - 'strive not to be a success, '
+
+str1.length //result - 28
+
+let str1 = "  Strive not to be a success, ";
+str1.trim() //result - "Strive not to be a success,";
+
+str1.trimStart() //result - "Strive not to be a success, ";
+str1.trimEnd() //result - "S  trive not to be a success,";
+	
+let bill = 'Rs.10'
+//padEnd - pads in the end until the length becomes 7
+bill.padEnd(7,'0') //result-'Rs.1000'
+
+str1[1] //result - 't'
+str1.charAt(1) //result -'t'
+//charCodeAt returns unicode value of character
+str1.charCodeAt(1) //result - 116
+
+//searching characters
+str1.indexOf('e') //result - 5
+str1.lastIndexOf('e') //result - 23
+str1.indexOf('z') //result - -1
+
+//searching words
+str1.search('not') //result - 7
+str1.search('nott') //result - -1
+
+//check if a word is present or not
+str1.includes('not') //result - true
+
+str1.startsWith('S') //result - true
+
+// Template Literals
+// Introduced in 2015 with ECMAScript6 or ES6
+
+let firstName = "Ramya";
+let lastName = "Murali";
+let city = "Chennai";
+
+console.log(firstName + " " + lastName + " lives in " + city);
+
+//string interpolation
+console.log(`${firstName} ${lastName} lives in ${city}`);
+
+//multiline string
+
+let msg = `happy
+birthday`;
+
+console.log(msg)
+
+//single and double quotes in string
+msg = "cat's name is toto";
+
+msg = `cat's name is "toto"`;
+ 
+
+console.log(msg)
+
+
+
+
+
+ //arrays
+let num = 10;
+let name = "vidhya";
+
+let cities = ["Chennai", "Madurai", "Trichy"];
+
+let marks = [78, 56, 67, 54, 98];
+
+//length - total elements in the array
+console.log(marks.length);
+
+//access 2nd element from start - index starts with 0.
+console.log(cities[1]);
+
+//access 3rd element in array
+console.log(cities[3]);
+
+//last element
+console.log(marks[marks.length - 1]);
+
+//mix of int and string
+let arr = [5, 6, 7, "a", "abc", [3, 4]];
+console.log(arr);
+console.log(arr[5][1]);
+
+//2d array
+let matrix = [
+  [3, 4, 5],
+  [4, 5, 7],
+  [6, 7, 8],
+];
+console.log(matrix[2][1]);
+
+//array methods
+let array = ["a", "b", "c", "d", "e"];
+
+//push - add element to the end and returns new length
+array.push("f");
+console.log(array);
+
+//pop - removes element from the end and
+//returns removed value
+console.log(array.pop());
+
+//shift - removes element from start of the array
+//returns removed value
+console.log(array.shift());
+console.log(array);
+
+//unshift - adds element to the start of the array
+//returns new length
+console.log(array.unshift("a"));
+console.log(array);
+
+//delete
+// delete array[2]
+// console.log(array[2])
+
+//splice
+//1st parameter - starting index
+//2nd parameter - no. of elements to be deleted from starting index
+//3rd(or more) parameter - values to be inserted from starting index
+array.splice(2, 2); //deletes 2 elements starting at index 2
+console.log(array);
+
+array.splice(1, 1, "m"); // replace - deletes element at index 1 and inserts 'm'
+console.log(array);
+
+array.splice(1, 2, "x", "y"); //deletes elements at position 1 and 2 and inserts 'x','y'
+console.log(array);
+
+array.splice(1, 0, "b");
+console.log(array);
+
+//slice(starting index, ending index)
+//ending index not included
+console.log(array.slice(1, 2));
+
+//reverse
+array.reverse();
+console.log(array);
+
+//join - converts array to  string
+
+let str = array.join();
+console.log(str);
+
+//split - converts string to array
+let str3 = "g,t,r,e";
+let arr3 = str3.split(",");
+console.log(arr3);
+
+//concat and spread operator
+let firstArr = [1, 2, 3];
+let secondArr = [4, 5, 6];
+
+let joinedArr = [firstArr,secondArr]
+console.log(joinedArr)
+
+joinedArr = firstArr.concat(secondArr)
+console.log(joinedArr)
+
+let joined = [...firstArr,...secondArr]
+console.log(joined)
+
+
+
+ //If else - conditional statement
+
+let pwd_correct = false;
+
+if (pwd_correct) {
+  console.log("You are logged in");
+} else {
+  console.log("Incorrect password");
+}
+
+// Comparison Operators: ==  ===  !=  !==  >  <  >=  <=  ?: conditional/ternary
+// Logical Operators: && || !
+
+age = 65;
+gender = "female";
+if (age > 60 && gender === "female")
+  console.log("You can avail special discount");
+
+//max of two numbers
+let a = 40, b = 30;
+let max
+
+if(a>b)
+  max = a
+else
+  max = b
+
+max = a>b?a:b
+
+
+console.log(max)
+
+
+console.log("Bye");
+
+
+
+
+ //same css as length converter
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FD Rate Calculator</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>FD Rate Calculator</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="tenure months">
+        </div>
+        <div>
+            <button type="submit" onclick="fdRate()">Calculate</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+      function fdRate(){
+        const months = Number(document.getElementById("input").value)
+        let rate = 0
+        //else if ladder
+        // <3 months - 5.8% 
+        // 3 - 6 months - 6.5%
+        // 7 - 9 months - 6.8% 
+        // >=10 months - 7%
+
+        if(months<3)
+            rate = 5.8
+        else if(months>=3 && months<=6)
+            rate = 6.5
+        else if(months>=7 && months<=9)
+            rate = 6.8
+        else
+            rate = 7
+        
+        let result = document.querySelector('#result')
+        result.innerHTML = "Your interest rate is " + rate + "%"
+      }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>City Stats</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Select a City</h2>
+        <div class="inputdiv">
+           <select id="input">
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+           </select>
+        </div>       
+        <div>
+            <button type = "submit" >Show Stats</button>
+        </div>
+    </div>
+    <script src='script.js'>
+        
+    </script>
+</body>
+</html>
+
+ /*
+'Chennai': population = 4646732
+           literacyRate = 90.20
+           language = 'Tamil'
+'Bengaluru':population = 8443675
+            literacyRate = 88.71
+            language = 'Kannada'
+'Mumbai':population = 12442373
+        literacyRate = 89.73
+        language = 'Marathi'
+'Delhi': population = 16787941
+         literacyRate = 86.20
+         language = 'Hindi'
+The Indian city of Bengaluru has a population of 8443675. Language spoken is Kannada and literacy rate is 88.71%.
+*/
+
+
+html,
+body{
+   margin: 0;
+   font-family: 'Poppins', sans-serif;
+   background-color:#f5e8ba;
+}
+
+#wrapper div,#wrapper h2{
+    display:flex;
+    justify-content: center;
+    
+}
+
+h2{
+    color:#ffeba7;
+    letter-spacing: 1px;
+}
+select{
+    border-radius: 5px;
+    border: 2px solid black ;
+    margin-top:30px;
+    height:2.5em;
+    width:250px;
+    padding-left:10px;
+    
+}
+
+
+input:active{
+    border:none;
+}
+#wrapper{
+    height:500px;
+    width:400px;
+    margin:200px auto;
+    background-color:#1f2029;
+    border-radius:10px;
+    padding:30px;
+}
+
+button{
+    margin-top:20px;
+    background-color:#ffeba7;
+    border-radius: 4px;
+    height: 44px;
+    font-weight: 600;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    border: none;
+    background-color: #ffeba7;
+    color: #102770;
+}
+
+button:hover{
+    cursor:pointer;
+}
+#result{
+    color:white;
+    margin-top:20px;
+    font-size:32px;
+}
+ 
+const button = document.querySelector('button')
+let resultdiv = document.createElement('div')
+resultdiv.id = 'result'
+document.getElementById('wrapper').appendChild(resultdiv)
+
+//event listener
+button.addEventListener('click',displayStats)
+function displayStats(){
+    
+    const input = document.getElementById("input")
+    const city = input.options[input.selectedIndex].value
+    let population = 0, literacyRate = 0, language =''
+    switch(city){
+        case 'Bengaluru':
+            population = 8443675
+            literacyRate = 88.71
+            language = 'Kannada'
+            break
+        case 'Chennai':
+            population = 4646732
+            literacyRate = 90.20
+            language = 'Tamil'
+            break
+        case 'Mumbai':
+            population = 12442373
+            literacyRate = 89.73
+            language = 'Marathi'
+            break
+        case 'Delhi':
+            population = 16787941
+            literacyRate = 86.20
+            language = 'Hindi'
+            break
+
+    }
+    let text = `The Indian city of ${city} has a population of ${population}. Language spoken is ${language} and literacy rate is ${literacyRate}%.`
+    console.log(text)
+    
+    document.getElementById('result').innerHTML = text
+
+}
+
+
+
+
+ let item = {
+  name:'phone',
+  price:25000,
+  quantity:1,
+  categories:['electronics','phones'],
+  dimensions:{
+    length:7,
+    breadth:3.5,
+    height:.5
+  }
+}
+console.log(item)
+console.log(item.categories[0])
+console.log(item.dimensions.length)
+
+//another way to create object
+let item2 = new Object();
+item2.name = 'charger'
+item2.price = 700
+item2.quantity = 1
+console.log(item2)
+
+//accessing object
+//dot notation
+console.log(item.price)
+item.price = 26000
+console.log(item.price)
+//adding new property
+item.returnable = true
+console.log(item)
+
+//square bracket notation
+console.log(item['price'])
+item['returnable'] = false
+
+let key = 'price'
+item[key] = 27500
+item.key = 28000 //doesn't work
+console.log(item)
+
+item = {
+  name: "phone", 
+  quantity:1,
+  price:25000,
+  buy: function(){
+    console.log('item added to cart')
+  },
+  addToList(){
+    console.log('item added to list')
+  }
+}
+item.buy()
+item.addToList()
+item.buy()
+item.addToList()
+item.buy()
+item.addToList()
+item.buy()
+item.addToList()
+
+ //Loops
+// console.log('hello')
+// console.log('hello')
+// console.log('hello')
+// console.log('hello')
+// console.log('hello')
+
+//for, while, do-while
+
+for(let i=1;i<=5;i++){
+  console.log('hello')
+}
+
+//print 1 to 5
+let i
+for(i=1;i<=5;i++){
+  console.log(i)
+}
+
+console.log('outside loop ', i)
+
+//print 10 to 1
+for(i=10;i>=1;i--)
+  console.log(i)
+
+console.log('while loop')
+i=0
+while(i>=1){
+  console.log(i)
+  i--;
+}
+
+console.log('outside loop ', i)
+
+console.log('do while loop')
+i=0
+do{
+  console.log(i)
+  i--;
+}while(i>=1)
+
+//break - stops the loop
+
+// while(true){
+//   let num = Number(prompt('enter a number'))
+//   if(!isNaN(num))
+//     break;
+// }
+
+console.log('continue demo')
+//continue - skips the current iteration
+for(i=1;i<=10;i++){
+  if(i%3==0)
+    continue
+  console.log(i)
+}
+
+//for...of
+let arr = ['apple','orange','grapes','mango']
+
+for(i=0;i<arr.length;i++)
+  console.log(arr[i].toUpperCase())
+
+
+for(let fruit of arr)
+  console.log(fruit)
+
+//for..in
+item = {
+  name: "phone", 
+  quantity:1,
+  price:25000
+}
+
+for(let key in item){
+  console.log(item[key])
+}
+
+
+ //Functions - performs specific task
+//            can be called multiple times
+//            optionally takes input as 
+//            parameters and optionally
+//            returns value
+
+//function declaration
+function isPositive(num){//parameter
+    return num>0
+}
+
+console.log(isPositive(-4))//argument
+
+function sayHello(){
+    console.log('hello')
+}
+
+sayHello()
+//hoisting
+// JavaScript Hoisting refers to the 
+// process whereby the interpreter appears
+// to move the declaration of functions, 
+// variables or classes to the top of their
+// scope, prior to execution of the code
+console.log(findProduct(4,7)) 
+
+function findProduct(a,b){
+    return a*b
+}
+
+
+console.log(findProduct)
+console.log(typeof findProduct)
+
+//default parameters
+function greet(name='there'){
+    console.log('hi',name)
+}
+
+greet('Ram')
+greet()
+
+//recursion - function calling itself
+//factorial - product of first n numbers
+//5! = 5*4*3*2*1 = 5*4*3*2*1
+function factorial(n){
+    if(n==1)
+        return 1
+    return n*factorial(n-1)
+}
+console.log(factorial(5))
+
+//function expression
+//assigned to a variable as object
+let a = 100
+
+let isEven = function(num){
+    return num%2==0
+}
+console.log(isEven(5))
+console.log(isEven)
+
+let arr = [ 2, 3, 5, 6, 10]
+let findSum = function(arr){
+    let sum = 0
+    for(let val of arr){
+        sum += val
+    }
+    return sum
+}
+
+console.log(findSum(arr))
+
+// let volume = function(l,b,h){
+//     return l*b*h
+// }
+
+//arrow function
+let volume = (l,b,h) => l*b*h
+console.log(volume(7,8,9))
+
+let sumOfArr = arr =>{
+    let sum = 0
+    for(let val of arr){
+        sum += val
+    }
+    return sum
+}
+console.log(sumOfArr(arr))
+
+//area of circle
+let area = r => Math.PI*r*r
+console.log(area(5))
+
+console.clear()
+//variable arguments - rest parameters
+let prod = function(...args){
+    let result = 1
+    for(let val of args)
+        result *= val
+    return result 
+}
+
+let prod2 = function(){
+    let result = 1
+    for(i=0;i<arguments.length;i++)
+      result *= arguments[i]
+    return result 
+
+}
+
+console.log(prod2(7,6,5,4))
+
+//Generators - generates value one by one
+
+function* indexGenerator(){
+    let index = 1
+    while(true){
+        yield index++
+    }
+}
+
+const gen = indexGenerator();
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+
+console.clear()
+
+
+
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Demo</title>
+</head>
+<body>
+    <h1></h1>
+    <select  id="branch">
+        <option value="select">select</option>
+    </select>
+    <script src="script.js">  
+        
+    </script>
+</body>
+</html>
+ 
